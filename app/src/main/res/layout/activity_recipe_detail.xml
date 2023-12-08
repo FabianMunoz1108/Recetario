@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/recipeImageView"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/recipeTitleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/recipeImageView"
+            android:layout_marginTop="16dp"
+            android:text="Recipe Title"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/recipeCategoryTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/recipeTitleTextView"
+            android:layout_marginTop="8dp"
+            android:text="Recipe Category"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/recipeTimeTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/recipeCategoryTextView"
+            android:layout_marginTop="8dp"
+            android:text="30 minutes"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/recipeIngredientsTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/recipeTimeTextView"
+            android:layout_marginTop="16dp"
+            android:text="Ingredients:"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/recipeIngredientsListTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/recipeIngredientsTextView"
+            android:layout_marginTop="8dp"
+            android:text="Ingredient 1, Ingredient 2, Ingredient 3, ..."
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/recipeInstructionsTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/recipeIngredientsListTextView"
+            android:layout_marginTop="16dp"
+            android:text="Instructions:"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/recipeInstructionsListTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/recipeInstructionsTextView"
+            android:layout_marginTop="8dp"
+            android:text="Step 1: Do this\nStep 2: Do that\n..."
+            android:textSize="16sp" />
+
+        <RatingBar
+            android:id="@+id/recipeStarsRatingBar"
+            style="?android:attr/ratingBarStyleIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/recipeInstructionsListTextView"
+            android:layout_marginTop="16dp"
+            android:numStars="5"
+            android:stepSize="0.1"
+            android:rating="2.0" />
+
+        <!-- Button to home -->
+        <Button
+            android:id="@+id/buttonBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Regresar"
+            android:layout_below="@id/recipeStarsRatingBar"
+            android:layout_centerHorizontal="true"
+            />
+
+    </RelativeLayout>
+</ScrollView>
