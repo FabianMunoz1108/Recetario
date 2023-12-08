@@ -51,4 +51,13 @@ class RecipeListAdapter(private val recipes: List<Recipe>) :
         val title: TextView = itemView.findViewById(R.id.recipeTitleTextView)
         val ratingBar: RatingBar = itemView.findViewById(R.id.recipeStarsRatingBar)
     }
+    fun filter(query: String) {
+        val filteredList = recipes.filter { recipe ->
+            recipe.title.contains(query, ignoreCase = true) ||
+                    recipe.category.contains(query, ignoreCase = true)
+            // Add more conditions if needed
+        }
+        // Update the adapter with the filtered list
+        notifyDataSetChanged()
+    }
 }

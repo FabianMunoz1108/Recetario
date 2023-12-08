@@ -1,24 +1,26 @@
 package com.example.recetario.views
 
 import android.content.Context
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.ProgressBar
+
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.recetario.R
-import com.example.recetario.controllers.AuthApi
 import com.example.recetario.controllers.RecipeApi
-import com.example.recetario.models.Recipe
 import com.example.recetario.models.RecipeListAdapter
+import com.google.android.material.search.SearchBar
+
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+
+import com.google.android.material.search.SearchView
 
 class RecipeListActivity : AppCompatActivity() {
 
@@ -34,7 +36,7 @@ class RecipeListActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         val progressBar = findViewById<ProgressBar>(R.id.progressBar)
-        Thread.sleep(2000)
+        val searchView = findViewById<SearchBar>(R.id.search_bar)
 
         GlobalScope.launch(Dispatchers.IO) {
             try {
