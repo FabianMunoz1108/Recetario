@@ -1,9 +1,11 @@
 package com.example.recetario.views
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Button
 import android.widget.ProgressBar
 
 import android.widget.Toast
@@ -23,7 +25,6 @@ import kotlinx.coroutines.withContext
 import com.google.android.material.search.SearchView
 
 class RecipeListActivity : AppCompatActivity() {
-
     private lateinit var api: RecipeApi
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,7 +37,13 @@ class RecipeListActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         val progressBar = findViewById<ProgressBar>(R.id.progressBar)
-        val searchView = findViewById<SearchBar>(R.id.search_bar)
+        val btnCreate = findViewById<com.google.android.material.floatingactionbutton.FloatingActionButton>(R.id.buttonCreate)
+
+        btnCreate?.setOnClickListener {
+            val recipes = Intent(this, RecipeNewActivity::class.java)
+            startActivity(recipes)
+        }
+        //val searchView = findViewById<SearchBar>(R.id.search_bar)
 
         GlobalScope.launch(Dispatchers.IO) {
             try {

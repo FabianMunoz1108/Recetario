@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:padding="30dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -12,7 +12,7 @@
         <ImageView
             android:id="@+id/recipeImageView"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="200dp"
             android:scaleType="centerCrop" />
 
         <TextView
@@ -59,12 +59,18 @@
             android:layout_marginTop="8dp"
             android:text="Ingredient 1, Ingredient 2, Ingredient 3, ..."
             android:textSize="16sp" />
+        <View
+            android:id="@+id/separador"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_below="@id/recipeIngredientsListTextView" />
 
         <TextView
             android:id="@+id/recipeInstructionsTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/recipeIngredientsListTextView"
+            android:layout_below="@id/separador"
             android:layout_marginTop="16dp"
             android:text="Instructions:"
             android:textSize="20sp" />
@@ -89,15 +95,13 @@
             android:stepSize="0.1"
             android:rating="2.0" />
 
-        <!-- Button to home -->
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonBack"
-            android:layout_width="wrap_content"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Regresar"
-            android:layout_below="@id/recipeStarsRatingBar"
-            android:layout_centerHorizontal="true"
-            />
+            android:text="Back"
+            android:layout_below="@id/recipeStarsRatingBar" />
 
     </RelativeLayout>
 </ScrollView>

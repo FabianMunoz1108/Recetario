@@ -3,7 +3,6 @@ package com.example.recetario.views
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.RatingBar
 import android.widget.TextView
@@ -20,7 +19,7 @@ class RecipeDetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recipe_detail)
 
-        val btnBack = findViewById<Button>(R.id.buttonBack)
+        val btnBack = findViewById<com.google.android.material.button.MaterialButton>(R.id.buttonBack)
         btnBack?.setOnClickListener {
 
             val recipes = Intent(this, RecipeListActivity::class.java)

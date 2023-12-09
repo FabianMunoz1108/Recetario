@@ -10,8 +10,8 @@
     <ImageView
         android:id="@+id/recipeImageView"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:scaleType="centerCrop" />
+        android:layout_height="200dp"
+        android:scaleType="center" />
 
     <TextView
         android:id="@+id/recipeTitleTextView"
@@ -32,5 +32,9 @@
         android:numStars="5"
         android:stepSize="0.1"
         android:rating="2.0" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray" />
 
 </LinearLayout>
