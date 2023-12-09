@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">Recetario</string>
-    <string name="searchbar_hint">search</string>
+    <string name="searchbar_hint">search recipe</string>
 </resources>
