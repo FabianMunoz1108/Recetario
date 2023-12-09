@@ -37,9 +37,9 @@ class LoginActivity:AppCompatActivity() {
         txtUsu.setText("fabian.munoz@congresogto.gob.mx")
         txtCon.setText("123456")
 
-        val auth = Auth(txtUsu.text.toString(), txtCon.text.toString())
-
         btnLogin.setOnClickListener {
+
+            val auth = Auth(txtUsu.text.toString(), txtCon.text.toString())
             if (isValid(auth)) {
                 progressBar.visibility = View.VISIBLE
 
